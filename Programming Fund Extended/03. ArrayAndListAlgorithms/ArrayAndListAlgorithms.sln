@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Array Contains Element", "01. Array Contains Element\01. Array Contains Element.csproj", "{A5D3C57E-0037-400B-AC1C-75F399FF194E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Smallest Element in Array", "02. Smallest Element in Array\02. Smallest Element in Array.csproj", "{E9E60E0A-85E9-4129-8431-8D3A72C6560A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5D3C57E-0037-400B-AC1C-75F399FF194E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D3C57E-0037-400B-AC1C-75F399FF194E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D3C57E-0037-400B-AC1C-75F399FF194E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D3C57E-0037-400B-AC1C-75F399FF194E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E60E0A-85E9-4129-8431-8D3A72C6560A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E60E0A-85E9-4129-8431-8D3A72C6560A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E60E0A-85E9-4129-8431-8D3A72C6560A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E60E0A-85E9-4129-8431-8D3A72C6560A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
