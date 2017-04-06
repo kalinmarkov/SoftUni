@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-const ObjectId = mongoose.Schema.Types.ObjectId;
 
 let articleSchema = mongoose.Schema({
-    title: { type: String, require: true},
-    content: { type: String, require: true},
-    author: { type: ObjectId, require: true, ref: 'User'},
-    date: { type: Date, default: Date.now() }
+    title: {type: String, required: true},
+    content: {type: String, required: true},
+    date: {type: Date, default: Date.now()},
+    author: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User'}
 });
 
 const Article = mongoose.model('Article', articleSchema);
