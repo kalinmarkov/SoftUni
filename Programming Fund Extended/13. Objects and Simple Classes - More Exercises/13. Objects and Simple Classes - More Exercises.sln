@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Exercises", "01. Exercises\01. Exercises.csproj", "{1A349A28-65DC-451B-9F2C-FCC722381E3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Optimized Banking System", "02. Optimized Banking System\02. Optimized Banking System.csproj", "{8EE06909-39FF-4844-AD26-025470C3C158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Animals", "03. Animals\03. Animals.csproj", "{03233664-09E4-4C5F-ADFF-0C6DDFE199B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1A349A28-65DC-451B-9F2C-FCC722381E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A349A28-65DC-451B-9F2C-FCC722381E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A349A28-65DC-451B-9F2C-FCC722381E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE06909-39FF-4844-AD26-025470C3C158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE06909-39FF-4844-AD26-025470C3C158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE06909-39FF-4844-AD26-025470C3C158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE06909-39FF-4844-AD26-025470C3C158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03233664-09E4-4C5F-ADFF-0C6DDFE199B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03233664-09E4-4C5F-ADFF-0C6DDFE199B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03233664-09E4-4C5F-ADFF-0C6DDFE199B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03233664-09E4-4C5F-ADFF-0C6DDFE199B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
