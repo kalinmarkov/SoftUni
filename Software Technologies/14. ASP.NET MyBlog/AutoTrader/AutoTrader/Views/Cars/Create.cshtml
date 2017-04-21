@@ -1,0 +1,23 @@
+﻿@model AutoTrader.Models.Cars.CreateCarModel
+
+@{ 
+    ViewBag.Title = "Sell Your Car Here";
+}
+
+@using (Html.BeginForm("Create", "Cars", FormMethod.Post))
+{
+    @Html.EditorForModel()
+
+    <div>
+        @Html.LabelFor(m => m.EngineType)
+    </div>
+    <div>
+        @Html.EnumDropDownListFor(m => m.EngineType);
+    </div>
+
+    <br />
+    <div>
+        <input type="submit" value="Save Car" />
+    </div>
+}
+

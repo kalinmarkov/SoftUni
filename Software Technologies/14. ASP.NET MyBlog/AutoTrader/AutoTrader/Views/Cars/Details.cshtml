@@ -1,0 +1,30 @@
+﻿@model AutoTrader.Models.Cars.CarDetailsModel
+
+<div class=""></div>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Model.ImageUrl" class="img-responsive" />
+    </div>
+    <div class="col-md-4">
+        <h2>@Model.Make @Model.Model, @(Model.Color != null ? Model.Color : string.Empty)</h2>
+        <h3>@Model.Year - @Model.Price BGN</h3>
+        <p class="lead">
+            <a href="mailto:@Model.ContactInformation">@Model.ContactInformation</a>
+            <br />
+            <br />
+            <a class="btn btn-default " href="/Cars/All?user=@Model.ContactInformation">See All Cars By This User</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p>
+            @Model.Engine.ToString("F1")l - @Model.EngineType
+        </p>
+        <p>
+            @if (Model.Power != null)
+            {
+                <span>@Model.Power hp.</span>
+            }
+        </p>
+    </div>
+</div>

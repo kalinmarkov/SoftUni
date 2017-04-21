@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AutoTrader.Models.Cars.CarListingModel>
+
+<h2 class="text-center mt-60">Our Cars - Page @ViewBag.CurrentPage</h2>
+
+@if (!Model.Any())
+{
+    <h2 class="text-center">No more offers!</h2>
+}
+
+@foreach (var car in Model)
+{
+    <div class="row mt-60">
+        <div class="col-md-6">
+            <img src="@car.ImageUrl" class="img-responsive" />
+        </div>
+        <div class="col-md-6">
+            <h2>@car.Make @car.Model (@car.Year)</h2>
+            <h3>@car.Price BGN</h3>
+            <a href="/Cars/Details/@car.Id" class="btn btn-primary">See More</a>
+        </div>
+    </div>
+}
+
+@{ 
+    var currentUserQuery = Request.QueryString["user"];
+}
+
+<p class="text-center mt-60">
+    <a href="/Cars/All?page=@(ViewBag.CurrentPage - 1)@(currentUserQuery != null ? "&user=" + currentUserQuery : string.Empty)" class="btn btn-primary @((ViewBag.CurrentPage == 1) ? "disabled" : string.Empty)"><< Previous</a>
+    <a href="/Cars/All?page=@(ViewBag.CurrentPage + 1)@(currentUserQuery != null ? "&user=" + currentUserQuery : string.Empty)" class="btn btn-primary @(!Model.Any() || Model.Count() < 5 ? "disabled" : string.Empty)">Next >></a>
+</p>
