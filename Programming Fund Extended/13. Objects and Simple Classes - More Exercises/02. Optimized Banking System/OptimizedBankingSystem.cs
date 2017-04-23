@@ -10,15 +10,13 @@ class BankAccount
 
     public string AccountName { get; set; }
 
-    public List<decimal> Balance { get; set; }
+    public decimal Balance { get; set; }
 }
 
 class OptimizedBankingSystem
 {
     static void Main()
     {
-        //  60/100
-
         var bankAccounts = new List<BankAccount>();
 
         while (true)
@@ -32,26 +30,33 @@ class OptimizedBankingSystem
             var tokens = input.Split(" |".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
             var bankName = tokens[0];
             var accountName = tokens[1];
-            var balance = new List<decimal>();
-            balance.Add(decimal.Parse(tokens[2]));
+            var balance = decimal.Parse(tokens[2]);
 
-            var newBankAccount = new BankAccount()
+            if (!bankAccounts.Any(x => x.AccountName == accountName && x.BankName == bankName))
             {
-                BankName = bankName,
-                AccountName = accountName,
-                Balance = balance
-            };
+                var newBankAccount = new BankAccount()
+                {
+                    BankName = bankName,
+                    AccountName = accountName,
+                    Balance = balance
+                };
 
-            bankAccounts.Add(newBankAccount);
+                bankAccounts.Add(newBankAccount);
+            }
+            else
+            {
+                bankAccounts.Where(a => a.BankName == bankName).First().Balance += balance;
+            }
         }
 
-        foreach (var bank in bankAccounts.OrderByDescending(x => x.Balance.Sum()))
-        {
-            var accountName = bank.AccountName;
-            var bankName = bank.BankName;
-            var balance = bank.Balance;
+        bankAccounts = bankAccounts
+             .OrderByDescending(x => x.Balance)
+             .ThenBy(x => x.BankName.Length)
+             .ToList();
 
-            Console.WriteLine($"{accountName} -> {balance} ({bankName})");
+        foreach (var account in bankAccounts)
+        {
+            Console.WriteLine($"{account.AccountName} -> {account.Balance} ({account.BankName})");
         }
     }
 }
