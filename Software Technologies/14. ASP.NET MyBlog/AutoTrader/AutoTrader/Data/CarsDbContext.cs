@@ -14,7 +14,9 @@ namespace AutoTrader.Data
         {
         }
 
-        public virtual IDbSet<CarDbContext> Cars { get; set; }
+        public virtual IDbSet<Car> Cars { get; set; }
+
+        public virtual IDbSet<Renting> Rentings { get; set; }
 
         public static CarsDbContext Create()
         {

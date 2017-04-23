@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using AutoTrader.Models;
 using AutoTrader.Data;
+using AutoTrader.Models.Renting;
 
 namespace AutoTrader.Controllers
 {
@@ -402,6 +403,29 @@ namespace AutoTrader.Controllers
         public ActionResult ExternalLoginFailure()
         {
             return View();
+        }
+
+        [Authorize]
+        public ActionResult Rentings()
+        {
+            var db = new CarsDbContext();
+
+            var userId = this.User.Identity.GetUserId();
+
+            var rentings = db.Rentings
+                .OrderByDescending(r => r.Id)
+                .Where(r => r.UserId == userId)
+                .Select(r => new UserRentingModel
+                {
+                    Days = r.Days,
+                    RentedOn = r.RentedOn,
+                    TotalPrice = r.TotalPrice,
+                    CarName = r.Car.Make + " " + r.Car.Model + " (" + r.Car.Year + ")",
+                    CarImgUrl = r.Car.ImageUrl
+                })
+                .ToList();
+
+            return View(rentings);
         }
 
         protected override void Dispose(bool disposing)

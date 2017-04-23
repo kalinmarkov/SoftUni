@@ -6,8 +6,13 @@ using System.Web;
 
 namespace AutoTrader.Data
 {
-    public class CarDbContext
+    public class Car
     {
+        public Car()
+        {
+            this.Rentings = new HashSet<Renting>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -33,9 +38,13 @@ namespace AutoTrader.Data
         [Required]
         public string ImageUrl { get; set; }
 
+        public bool IsRented { get; set; }
+
         [Required]
         public string OwnerId { get; set; }
 
         public virtual User Owner { get; set; }
+
+        public virtual ICollection<Renting> Rentings { get; set; }
     }
 }

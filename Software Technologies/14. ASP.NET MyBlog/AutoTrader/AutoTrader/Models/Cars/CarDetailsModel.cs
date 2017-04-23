@@ -9,6 +9,8 @@ namespace AutoTrader.Models.Cars
 {
     public class CarDetailsModel
     {
+        public int Id { get; set; }
+
         public string Make { get; set; }
         
         public string Model { get; set; }
@@ -26,6 +28,10 @@ namespace AutoTrader.Models.Cars
         public decimal Price { get; set; }
         
         public string ImageUrl { get; set; }
+
+        public bool IsRented { get; set; }
+
+        public int TotalRents { get; set; }
 
         public string ContactInformation { get; set; }
     }

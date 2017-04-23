@@ -29,7 +29,7 @@ namespace AutoTrader.Migrations
                 return;
             }
 
-            context.Cars.Add(new CarDbContext
+            context.Cars.Add(new Car
             {
                 Make = "BMW",
                 Model = "650i",
@@ -43,7 +43,7 @@ namespace AutoTrader.Migrations
                 OwnerId = user.Id
             });
 
-            context.Cars.Add(new CarDbContext
+            context.Cars.Add(new Car
             {
                 Make = "BMW",
                 Model = "650i",
@@ -57,7 +57,7 @@ namespace AutoTrader.Migrations
                 OwnerId = user.Id
             });
 
-            context.Cars.Add(new CarDbContext
+            context.Cars.Add(new Car
             {
                 Make = "VW",
                 Model = "Scirocco",
