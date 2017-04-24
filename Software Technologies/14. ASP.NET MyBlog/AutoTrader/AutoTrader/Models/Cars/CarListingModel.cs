@@ -19,6 +19,6 @@ namespace AutoTrader.Models.Cars
 
         public string ImageUrl { get; set; }
 
-        public bool IsRented { get; set; }    
+        public bool IsSold { get; set; }    
     }
 }

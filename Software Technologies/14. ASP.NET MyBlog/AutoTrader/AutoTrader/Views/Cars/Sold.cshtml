@@ -1,0 +1,22 @@
+﻿@model AutoTrader.Models.Leasing.LeasingCarModel
+
+<h3 class="text-center">Are you sure you want to buy this car?</h3>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <img src="@Model.CarImageUrl" class="img-responsive" />
+    </div>
+</div>
+
+<p class="text-center mt-60">@Model.Price BGN / @Model.Months Months = @Model.TotalPrice BGN/Month</p>
+
+@using (Html.BeginForm("Sold", "Cars", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.CarId)
+    @Html.HiddenFor(m => m.Months)
+
+    <div class="text-center mt-60">
+        <input class="btn btn-primary" type="submit" value="Buy it Now!" />
+        <a href="/Cars/Details/@Model.CarId" class="btn btn-default">Cancel</a>
+    </div>
+}

@@ -12,12 +12,12 @@ namespace AutoTrader.Data
         public User()
         {
             this.Cars = new HashSet<Car>();
-            this.Rentings = new HashSet<Renting>();
+            this.Leasings = new HashSet<Leasing>();
         }
 
         public virtual ICollection<Car> Cars { get; set; }
 
-        public virtual ICollection<Renting> Rentings { get; set; }
+        public virtual ICollection<Leasing> Leasings { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {

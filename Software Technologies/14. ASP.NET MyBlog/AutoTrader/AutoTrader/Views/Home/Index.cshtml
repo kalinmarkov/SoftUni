@@ -3,13 +3,12 @@
 @{
     ViewBag.Title = "Home Page";
 }
-
 <div class="jumbotron">
-    <h1 class="text-center">AutoTrader</h1>
-    <p class="lead text-center">Impress yourself with an SuperCar</p>
+    <p class="lead text-center"><img src="~/Image/MyCompanyLogo.jpg" width="400" height="200" class="img-thumbnail" /></p>
+    <h1 class="text-center">You deserve Super Car</h1>
     <p class="text-center">
-        <a href="/Cars/Create" class="btn btn-primary btn-lg">Add Yours</a>
-        <a href="/Cars/All" class="btn btn-primary btn-lg">Take a Look</a>
+        <a href="/Cars/Create" class="btn btn-primary btn-lg">Sell My Car</a>
+        <a href="/Cars/All" class="btn btn-primary btn-lg">Buy New Or Used</a>
     </p>
 </div>
 
@@ -21,7 +20,8 @@
             <p>
             <a class="btn btn-default" href="/Cars/Details/@car.Id">
                 <img src="@car.ImageUrl" class="img-responsive" />
-                See More</a></p>
+                See More</a>
+            </p>
         </div>
     }
 

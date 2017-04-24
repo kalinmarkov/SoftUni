@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using AutoTrader.Models;
 using AutoTrader.Data;
-using AutoTrader.Models.Renting;
+using AutoTrader.Models.Leasing;
 
 namespace AutoTrader.Controllers
 {
@@ -406,26 +406,26 @@ namespace AutoTrader.Controllers
         }
 
         [Authorize]
-        public ActionResult Rentings()
+        public ActionResult Leasing()
         {
             var db = new CarsDbContext();
 
             var userId = this.User.Identity.GetUserId();
 
-            var rentings = db.Rentings
+            var leasing = db.Leasings
                 .OrderByDescending(r => r.Id)
                 .Where(r => r.UserId == userId)
-                .Select(r => new UserRentingModel
+                .Select(r => new UserLeasingModel
                 {
-                    Days = r.Days,
-                    RentedOn = r.RentedOn,
+                    Months = r.Months,
+                    SoldOn = r.SoldOn,
                     TotalPrice = r.TotalPrice,
                     CarName = r.Car.Make + " " + r.Car.Model + " (" + r.Car.Year + ")",
                     CarImgUrl = r.Car.ImageUrl
                 })
                 .ToList();
 
-            return View(rentings);
+            return View(leasing);
         }
 
         protected override void Dispose(bool disposing)

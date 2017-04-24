@@ -10,7 +10,7 @@ namespace AutoTrader.Data
     {
         public Car()
         {
-            this.Rentings = new HashSet<Renting>();
+            this.Leasings = new HashSet<Leasing>();
         }
 
         public int Id { get; set; }
@@ -38,13 +38,13 @@ namespace AutoTrader.Data
         [Required]
         public string ImageUrl { get; set; }
 
-        public bool IsRented { get; set; }
+        public bool IsSold { get; set; }
 
         [Required]
         public string OwnerId { get; set; }
 
         public virtual User Owner { get; set; }
 
-        public virtual ICollection<Renting> Rentings { get; set; }
+        public virtual ICollection<Leasing> Leasings { get; set; }
     }
 }

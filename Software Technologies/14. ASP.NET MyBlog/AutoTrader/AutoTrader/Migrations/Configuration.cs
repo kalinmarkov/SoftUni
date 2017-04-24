@@ -11,7 +11,7 @@ namespace AutoTrader.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "AutoTrader.Data.CarsDbContext";
         }
 

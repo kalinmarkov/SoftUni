@@ -15,7 +15,7 @@ namespace AutoTrader.Controllers
             var db = new CarsDbContext();
 
             var cars = db.Cars
-                .Where(c => !c.IsRented)
+                .Where(c => !c.IsSold)
                 .OrderByDescending(c => c.Id)
                 .Take(3)
                 .Select(c => new CarListingModel

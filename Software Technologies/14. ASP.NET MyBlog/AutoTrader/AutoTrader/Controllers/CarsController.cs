@@ -1,6 +1,6 @@
 ﻿using AutoTrader.Data;
 using AutoTrader.Models.Cars;
-using AutoTrader.Models.Renting;
+using AutoTrader.Models.Leasing;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -49,7 +49,7 @@ namespace AutoTrader.Controllers
                     Model = c.Model,
                     Year = c.Year,
                     Price = c.Price,
-                    IsRented = c.IsRented
+                    IsSold = c.IsSold
                 })
                 .ToList();
 
@@ -115,8 +115,8 @@ namespace AutoTrader.Controllers
                     Power = c.Power,
                     Price = c.Price,
                     Year = c.Year,
-                    IsRented = c.IsRented,
-                    TotalRents = c.Rentings.Count(),
+                    IsSold = c.IsSold,
+                    TotalRents = c.Leasings.Count(),
                     ContactInformation = c.Owner.Email
                 })
                 .FirstOrDefault();
@@ -131,9 +131,9 @@ namespace AutoTrader.Controllers
 
         [Authorize]
         [HttpGet]
-        public ActionResult Rent(RentCarModel rentCarModel)
+        public ActionResult Sold(LeasingCarModel leasingCarModel)
         {
-            if (rentCarModel.Days < 1 || rentCarModel.Days > 10)
+            if (leasingCarModel.Months < 1 || leasingCarModel.Months > 24)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -141,32 +141,32 @@ namespace AutoTrader.Controllers
             var db = new CarsDbContext();
 
             var car = db.Cars
-                .Where(c => c.Id == rentCarModel.CarId)
+                .Where(c => c.Id == leasingCarModel.CarId)
                 .Select(c => new
                 {
-                    c.IsRented,
+                    c.IsSold,
                     c.Price,
                     c.ImageUrl,
                     FullName = c.Make + " " + c.Model + " (" + c.Year + ")"
                 })
                 .FirstOrDefault();
 
-            if (car == null || car.IsRented)
+            if (car == null || car.IsSold)
             {
                 return HttpNotFound();
             }
 
-            rentCarModel.CarName = car.FullName;
-            rentCarModel.CarImageUrl = car.ImageUrl;
-            rentCarModel.Price = car.Price;
-            rentCarModel.TotalPrice = car.Price * rentCarModel.Days;
+            leasingCarModel.CarName = car.FullName;
+            leasingCarModel.CarImageUrl = car.ImageUrl;
+            leasingCarModel.Price = car.Price;
+            leasingCarModel.TotalPrice = car.Price / leasingCarModel.Months;
 
-            return View(rentCarModel);
+            return View(leasingCarModel);
         }
 
         [Authorize]
         [HttpPost]
-        public ActionResult Rent(int carId, int days)
+        public ActionResult Sold(int carId, int months)
         {
             var db = new CarsDbContext();
 
@@ -176,23 +176,23 @@ namespace AutoTrader.Controllers
 
             var userId = this.User.Identity.GetUserId();
 
-            if (car == null || car.IsRented || car.OwnerId == userId)
+            if (car == null || car.IsSold || car.OwnerId == userId)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var renting = new Renting
+            var leasing = new Leasing
             {
                 CarId = carId,
-                Days = days,
-                RentedOn = DateTime.Now,
+                Months = months,
+                SoldOn = DateTime.Now,
                 UserId = userId,
-                TotalPrice = days + car.Price
+                TotalPrice = months + car.Price
             };
 
-            car.IsRented = true;
+            car.IsSold = true;
 
-            db.Rentings.Add(renting);
+            db.Leasings.Add(leasing);
             db.SaveChanges();
 
             return RedirectToAction("Details", new { id = car.Id });
