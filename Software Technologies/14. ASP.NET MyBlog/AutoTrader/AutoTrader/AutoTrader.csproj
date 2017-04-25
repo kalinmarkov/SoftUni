@@ -199,7 +199,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\arrow.gif" />
-    <Content Include="Image\ford-ecosport.jpg" />
+    <Content Include="Image\fordEcosport.jpg" />
     <Content Include="Image\MyCompanyLogo.jpg" />
     <Content Include="Image\unnamed.png" />
     <Content Include="Scripts\bootstrap.js" />

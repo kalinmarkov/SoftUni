@@ -3,21 +3,27 @@
 @{ 
     ViewBag.Title = "Sell Your Car Here";
 }
+<div class="col-md-4">
+    @using (Html.BeginForm("Create", "Cars", FormMethod.Post))
+    {
+        @Html.EditorForModel()
 
-@using (Html.BeginForm("Create", "Cars", FormMethod.Post))
-{
-    @Html.EditorForModel()
+        <div>
+            @Html.LabelFor(m => m.EngineType)
+        </div>
+        <div>
+            @Html.EnumDropDownListFor(m => m.EngineType)
+        </div>
 
-    <div>
-        @Html.LabelFor(m => m.EngineType)
-    </div>
-    <div>
-        @Html.EnumDropDownListFor(m => m.EngineType);
-    </div>
+        <br />
+        <div>
+            <input type="submit" class="btn btn-primary" value="Save Car" />
+        </div>
+    }
 
-    <br />
-    <div>
-        <input type="submit" class="btn btn-primary" value="Save Car" />
-    </div>
-}
+</div>
+
+<div class="col-md-8">
+    <img src="~/Image/unnamed.png"/>
+</div>
 
