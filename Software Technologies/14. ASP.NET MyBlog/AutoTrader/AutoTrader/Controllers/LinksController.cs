@@ -28,12 +28,7 @@ namespace AutoTrader.Controllers
         {
             return View();
         }
-
-        public ActionResult Plant()
-        {
-            return View();
-        }
-
+        
         public ActionResult TopMarques()
         {
             return View();

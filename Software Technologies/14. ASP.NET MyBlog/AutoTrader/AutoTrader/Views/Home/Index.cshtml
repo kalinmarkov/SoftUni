@@ -47,27 +47,9 @@
             <li class="inline-links-list__item">
                 @Html.ActionLink("Farm", "Farm", "Links")
             </li>
-            <li class="inline-links-list__item">
-                @Html.ActionLink("Plant", "Plant", "Links")
-            </li>
         </ul>
     </nav>
 </div>
 <div>
     <img class="col-md-9 img-responsive" src="~/Image/fordEcosport.jpg" />
-</div>
-
-<div class="row">
-    @foreach (var car in Model)
-    {
-        <div class="col-md-4">
-            <h2>@car.Make @car.Model (@car.Year)</h2>
-            <p>
-            <a class="btn btn-default" href="/Cars/Details/@car.Id">
-                <img src="@car.ImageUrl" class="img-responsive" />
-                See More</a>
-            </p>
-        </div>
-    }
-
 </div>

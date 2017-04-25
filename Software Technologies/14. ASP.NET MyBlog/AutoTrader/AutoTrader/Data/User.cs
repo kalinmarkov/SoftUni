@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
+using AutoTrader.Models;
 
 namespace AutoTrader.Data
 {
@@ -13,11 +14,14 @@ namespace AutoTrader.Data
         {
             this.Cars = new HashSet<Car>();
             this.Leasings = new HashSet<Leasing>();
+            this.Posts = new HashSet<Post>();
         }
 
         public virtual ICollection<Car> Cars { get; set; }
 
         public virtual ICollection<Leasing> Leasings { get; set; }
+
+        public virtual ICollection<Post> Posts { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {

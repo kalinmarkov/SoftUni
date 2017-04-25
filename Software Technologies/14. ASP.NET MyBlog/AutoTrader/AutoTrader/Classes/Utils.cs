@@ -7,15 +7,15 @@ namespace AutoTrader.Classes
 {
     public class Utils
     {
-        public static string CutText(string text, int maxLenght = 100)
+        public static string CutText(string text, int maxLengh = 20)
         {
-            if (text == null || text.Length <= text.Length)
+            if (text == null || text.Length <= maxLengh)
             {
                 return text;
             }
             else
             {
-                var shortText = text.Substring(0, maxLenght) + "...";
+                var shortText = text.Substring(0, maxLengh) + "...";
 
                 return shortText;
             }

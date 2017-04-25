@@ -187,7 +187,7 @@ namespace AutoTrader.Controllers
                 Months = months,
                 SoldOn = DateTime.Now,
                 UserId = userId,
-                TotalPrice = months + car.Price
+                TotalPrice = car.Price
             };
 
             car.IsSold = true;

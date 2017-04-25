@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using AutoTrader.Data;
 using AutoTrader.Models;
+using AutoTrader.Models.Cars;
 
 namespace AutoTrader.Controllers
 {
@@ -18,7 +19,9 @@ namespace AutoTrader.Controllers
         // GET: Posts
         public ActionResult Index()
         {
-            return View(db.Posts.ToList());
+            var postsWithAuthors = db.Posts.Include(p => p.Author).ToList();
+
+            return View(postsWithAuthors);
         }
 
         // GET: Posts/Details/5
@@ -51,6 +54,7 @@ namespace AutoTrader.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 post.Date = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();

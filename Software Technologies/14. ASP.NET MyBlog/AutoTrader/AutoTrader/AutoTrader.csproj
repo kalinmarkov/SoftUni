@@ -261,7 +261,6 @@
     <Content Include="Views\Account\Leasing.cshtml" />
     <Content Include="Views\Links\TopMarques.cshtml" />
     <Content Include="Views\Links\Bikes.cshtml" />
-    <Content Include="Views\Links\Plant.cshtml" />
     <Content Include="Views\Links\Vans.cshtml" />
     <Content Include="Views\Links\Motors.cshtml" />
     <Content Include="Views\Links\Caravans.cshtml" />
@@ -276,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Post\" />
     <Folder Include="Views\Article\" />
   </ItemGroup>
   <ItemGroup>

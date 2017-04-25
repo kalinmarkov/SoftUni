@@ -14,6 +14,7 @@ namespace AutoTrader.Models
             this.Date = DateTime.Now;
         }
 
+        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -24,6 +25,6 @@ namespace AutoTrader.Models
 
         public DateTime Date { get; set; }
 
-        public User Author { get; set; }
+        public virtual User Author { get; set; }
     }
 }
