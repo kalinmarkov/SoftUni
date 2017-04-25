@@ -1,0 +1,35 @@
+﻿@model List<AutoTrader.Models.Post>
+
+
+<section class="row">
+    @foreach (var post in Model)
+    {
+        <article class="post">
+            <h2 class="title">@post.Title</h2>
+            <div>
+                Posted From
+                @if (post.Author != null)
+                {
+                    <i>(@post.Author.UserName)</i>
+                } 
+                <i>@post.Date</i>
+            </div>
+            <div class="content">
+                @post.Content
+            </div>
+        </article>
+    }
+</section>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+

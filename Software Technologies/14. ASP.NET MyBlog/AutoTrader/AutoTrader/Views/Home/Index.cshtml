@@ -3,13 +3,58 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<div class="jumbotron">
+<div>
     <p class="lead text-center"><img src="~/Image/MyCompanyLogo.jpg" width="400" height="200" class="img-thumbnail" /></p>
     <h2 class="text-center text-danger">Discover your perfect car, Here’s a quick and easy way to find a car that suits you.</h2>
+</div>
+<div>
     <p class="text-center">
         <a href="/Cars/Create" class="btn btn-primary btn-lg">Sell My Car</a>
         <a href="/Cars/All" class="btn btn-primary btn-lg">Buy New Or Used</a>
     </p>
+</div>
+
+<div class="post col-md-3">
+    <h3>Browse by style:</h3>
+    <a>
+        <img src="~/Image/arrow.gif" width="100" height="60">
+    </a>
+    <br />
+    <br />
+    <nav>
+        <ul>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Cars", "Cars", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Prestige cars", "TopMarques", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Bikes", "Bikes", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Vans", "Vans", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Motorhomes", "Motors", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Caravans", "Caravans", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Trucks", "Trucks", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Farm", "Farm", "Links")
+            </li>
+            <li class="inline-links-list__item">
+                @Html.ActionLink("Plant", "Plant", "Links")
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+    <img class="col-md-9 img-responsive" src="~/Image/fordEcosport.jpg" />
 </div>
 
 <div class="row">

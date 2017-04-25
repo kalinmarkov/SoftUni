@@ -31,16 +31,26 @@ namespace AutoTrader.Controllers
             return View(cars);
         }
 
-        public ActionResult About()
+        public ActionResult Help()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Help me to choose";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult CreateReview()
         {
-            ViewBag.Message = "Your contact page.";
+
+            var db = new CarsDbContext();
+
+            var post = db.Posts.OrderByDescending(p => p.Date).Take(3);
+
+            return View(post.ToList());
+        }
+
+        public ActionResult TopMarques()
+        {
+            ViewBag.Message = "Help others with more info";
 
             return View();
         }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using AutoTrader.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,6 +14,7 @@ namespace AutoTrader.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public virtual IDbSet<Post> Posts { get; set; }
 
         public virtual IDbSet<Car> Cars { get; set; }
 
