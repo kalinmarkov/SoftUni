@@ -6,6 +6,8 @@
 <div class="col-md-4">
     @using (Html.BeginForm("Create", "Cars", FormMethod.Post))
     {
+        
+
         @Html.EditorForModel()
 
         <div>
@@ -14,7 +16,12 @@
         <div>
             @Html.EnumDropDownListFor(m => m.EngineType)
         </div>
-
+        <div>
+            @Html.LabelFor(m => m.VehicleType)
+        </div>
+        <div>
+            @Html.EnumDropDownListFor(m => m.VehicleType)
+        </div>
         <br />
         <div>
             <input type="submit" class="btn btn-primary" value="Save Car" />

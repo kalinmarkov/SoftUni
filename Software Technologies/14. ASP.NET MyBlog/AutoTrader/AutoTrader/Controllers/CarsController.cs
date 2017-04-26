@@ -75,6 +75,7 @@ namespace AutoTrader.Controllers
 
                 var car = new Car
                 {
+                    VehicleType = CarModel.VehicleType,
                     Make = CarModel.Make,
                     Model = CarModel.Model,
                     Color = CarModel.Color,

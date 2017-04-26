@@ -54,7 +54,7 @@ namespace AutoTrader.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+                post.Author = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
                 post.Date = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();

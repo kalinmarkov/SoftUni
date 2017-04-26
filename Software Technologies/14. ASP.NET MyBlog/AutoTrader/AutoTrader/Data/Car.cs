@@ -31,6 +31,8 @@ namespace AutoTrader.Data
 
         public EngineType EngineType { get; set; }
 
+        public VehicleType VehicleType { get; set; }
+
         public int? Power { get; set; }
         
         public decimal Price { get; set; }

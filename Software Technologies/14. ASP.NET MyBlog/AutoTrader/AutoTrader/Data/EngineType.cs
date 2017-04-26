@@ -9,6 +9,7 @@ namespace AutoTrader.Data
     {
         Petrol,
         Diesel,
-        Electrical
+        Electrical,
+        None
     }
 }

@@ -21,6 +21,7 @@ namespace AutoTrader.Models
         public string Title { get; set; }
 
         [Required]
+        [DataType(DataType.MultilineText)]
         public string Content { get; set; }
 
         public DateTime Date { get; set; }

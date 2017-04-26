@@ -177,6 +177,7 @@
     <Compile Include="Data\Car.cs" />
     <Compile Include="Data\EngineType.cs" />
     <Compile Include="Data\Leasing.cs" />
+    <Compile Include="Data\VehicleType.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,8 +204,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\arrow.gif" />
+    <Content Include="Image\bike1.png" />
+    <Content Include="Image\bike2.jpeg" />
+    <Content Include="Image\bike3.jpg" />
     <Content Include="Image\fordEcosport.jpg" />
     <Content Include="Image\MyCompanyLogo.jpg" />
+    <Content Include="Image\truck1.jpg" />
+    <Content Include="Image\truck2.jpg" />
+    <Content Include="Image\truck3.jpg" />
     <Content Include="Image\unnamed.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -220,6 +227,24 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Image\car1.jpg" />
+    <Content Include="Image\car2.jpg" />
+    <Content Include="Image\car3.jpg" />
+    <Content Include="Image\caravan1.jpg" />
+    <Content Include="Image\caravan2.jpg" />
+    <Content Include="Image\caravan3.jpg" />
+    <Content Include="Image\farm1.jpg" />
+    <Content Include="Image\farm2.jpg" />
+    <Content Include="Image\farm3.jpg" />
+    <Content Include="Image\luxury1.jpg" />
+    <Content Include="Image\luxury2.png" />
+    <Content Include="Image\luxury3.jpg" />
+    <Content Include="Image\motor1.jpg" />
+    <Content Include="Image\motor2.jpg" />
+    <Content Include="Image\motor3.jpg" />
+    <Content Include="Image\van1.jpg" />
+    <Content Include="Image\van2.jpg" />
+    <Content Include="Image\van3.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -275,7 +300,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Post\" />
     <Folder Include="Views\Article\" />
   </ItemGroup>
   <ItemGroup>

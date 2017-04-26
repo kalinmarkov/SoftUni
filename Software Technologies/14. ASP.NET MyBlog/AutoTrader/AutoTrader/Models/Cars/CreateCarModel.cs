@@ -10,6 +10,10 @@ namespace AutoTrader.Models.Cars
 {
     public class CreateCarModel
     {
+        [Display(Name = "Vehicle type")]
+        [ScaffoldColumn(false)]
+        public VehicleType VehicleType { get; set; }
+
         [Required]
         [MaxLength(40)]
         public string Make { get; set; }
