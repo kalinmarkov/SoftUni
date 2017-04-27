@@ -21,13 +21,16 @@
     </div>
     <div class="col-md-4">
         <p>
-            @Model.Engine.ToString("F1")l - @Model.EngineType
+           <h4>@Model.Engine.ToString("F1")l - @Model.EngineType</h4> 
         </p>
         <p>
-            @if (Model.Power != null)
-            {
-                <span>@Model.Power hp.</span>
-            }
+            <h4>
+                @if (Model.Power != null)
+                {
+                    <span>@Model.Power hp.</span>
+                }
+            </h4>
+            
         </p>
         <p>
             @{ 
@@ -52,8 +55,7 @@
                 {
                     @Html.Hidden("CarId", Model.Id)
                     <span>Buy this car on leasing for @Html.DropDownList("Months", options) months!</span>
-                    <br />
-                    <input type="submit" class="btn btn-primary @(Model.IsSold ? "disabled" : string.Empty)" value="Buy it Now!" />
+                    <input type="submit" class="btn btn-primary @(Model.IsSold ? "disabled" : string.Empty) mt-60" value="Buy on free lease!" />
                 }
             }
 

@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<AutoTrader.Models.Cars.CarListingModel>
 
-<h2 class="text-center mt-60">Our Cars - Page @ViewBag.CurrentPage</h2>
+<h2 class="text-center">Vehicle for sale - Page @ViewBag.CurrentPage</h2>
 
 @if (!Model.Any())
 {
@@ -14,7 +14,7 @@
         @Html.Hidden("user", Request.QueryString["user"])
     }
 
-    <div class="text-center mt-60">
+    <div class="text-center">
         <input type="text" class="form-control" name="search" style="display: inline-block" value="@Request.QueryString["search"]" />
         <input type="submit" value="Search" class="btn btn-default" />
     </div>
@@ -32,6 +32,7 @@
             <a href="/Cars/Details/@car.Id" class="btn @(car.IsSold ? "btn-default" : "btn-primary")">@(car.IsSold ? "This car is not available" : "See More")</a>
         </div>
     </div>
+
 }
 
 @{
