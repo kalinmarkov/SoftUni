@@ -9,16 +9,11 @@ class Program
 {
     static void Main()
     {
-        //var result = 'b';
-        //var letter = result - '0';
+        var result = 'b';
+        var letter = result - '0';
 
-        //Console.WriteLine(letter);
+        Console.WriteLine(letter);
 
-        int people = int.Parse(Console.ReadLine());
-
-        var courses = Math.Ceiling((double)people / (4 + 8 + 12));
-
-        Console.WriteLine(courses);
     }
 }
 
