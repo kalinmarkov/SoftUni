@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26March.05.Peperuda", "26March.05.Peperuda\26March.05.Peperuda.csproj", "{40B9BC39-C93D-4DC9-BA3A-D4DAE4384A54}"
 EndProject
@@ -176,6 +176,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18December2016.05.ChristmasHat", "18December2016.05.ChristmasHat\18December2016.05.ChristmasHat.csproj", "{8FFE7126-89AA-413D-9F1E-70D5633850B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18December2016.06.LettersCombination", "18December2016.06.LettersCombination\18December2016.06.LettersCombination.csproj", "{721D2780-2AC5-4B77-BC4E-8F011F891C8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "18 March 2017", "18 March 2017", "{A3CF3A25-EB0D-48CA-A982-359D3D2382E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Dog House", "01. Dog House\01. Dog House.csproj", "{05214CEB-3FAF-4B7F-8E98-83A596DAE6CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 - Sum of Two Numbers", "06 - Sum of Two Numbers\06 - Sum of Two Numbers.csproj", "{439ED59B-72FC-4340-AA25-1C79551C1A0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -483,6 +489,14 @@ Global
 		{721D2780-2AC5-4B77-BC4E-8F011F891C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{721D2780-2AC5-4B77-BC4E-8F011F891C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{721D2780-2AC5-4B77-BC4E-8F011F891C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05214CEB-3FAF-4B7F-8E98-83A596DAE6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05214CEB-3FAF-4B7F-8E98-83A596DAE6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05214CEB-3FAF-4B7F-8E98-83A596DAE6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05214CEB-3FAF-4B7F-8E98-83A596DAE6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439ED59B-72FC-4340-AA25-1C79551C1A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439ED59B-72FC-4340-AA25-1C79551C1A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439ED59B-72FC-4340-AA25-1C79551C1A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439ED59B-72FC-4340-AA25-1C79551C1A0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -562,5 +576,7 @@ Global
 		{AD8908D2-E73D-40E1-9D49-9DEC22EB6100} = {A1E9B7AE-5848-4E52-8A7E-B48492E6BA9C}
 		{8FFE7126-89AA-413D-9F1E-70D5633850B2} = {A1E9B7AE-5848-4E52-8A7E-B48492E6BA9C}
 		{721D2780-2AC5-4B77-BC4E-8F011F891C8B} = {A1E9B7AE-5848-4E52-8A7E-B48492E6BA9C}
+		{05214CEB-3FAF-4B7F-8E98-83A596DAE6CD} = {A3CF3A25-EB0D-48CA-A982-359D3D2382E2}
+		{439ED59B-72FC-4340-AA25-1C79551C1A0F} = {A3CF3A25-EB0D-48CA-A982-359D3D2382E2}
 	EndGlobalSection
 EndGlobal
