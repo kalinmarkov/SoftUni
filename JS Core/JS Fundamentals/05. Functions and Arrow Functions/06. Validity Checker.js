@@ -1,4 +1,5 @@
-function checkPoint(x1, y1, x2, y2) {
+function checkPoint(arr) {
+    let [x1, y1, x2, y2] = arr;
     function isValidDistance(x1, y1, x2, y2) {
         let isEquals = false;
         let arr=[x1, y1, x2, y2];
@@ -38,4 +39,4 @@ function checkPoint(x1, y1, x2, y2) {
 
 }
 
-console.log(checkPoint(3, 0, 0, 4));
+console.log(checkPoint([3, 0, 0, 4]));
