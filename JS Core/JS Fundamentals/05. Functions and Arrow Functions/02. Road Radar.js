@@ -27,4 +27,4 @@ function readSpeedAndZone(speed, zone) {
 
 }
 
-console.log(readSpeedAndZone(200, 'motorway'));
+readSpeedAndZone(200, 'motorway');
