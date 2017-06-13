@@ -9,3 +9,5 @@ function printObject(input) {
         [thirdValue]: input[5]
     });
 }
+
+printObject(['name', 'Pesho', 'age', '23', 'gender', 'male']);

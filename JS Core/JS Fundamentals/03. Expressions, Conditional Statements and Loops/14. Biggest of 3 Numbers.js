@@ -1,4 +1,5 @@
-function printBiggestNum(nums) {
-    nums.sort((a, b) => b - a);
-    console.log(nums[0]);
+function printBiggestNum(a, b, c) {
+    console.log(Math.max(a, b, c));
 }
+
+printBiggestNum(130, 5, 99);

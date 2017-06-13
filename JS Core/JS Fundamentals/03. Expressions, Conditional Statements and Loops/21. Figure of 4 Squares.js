@@ -28,3 +28,5 @@ function  printSquare(n) {
     }
 
 }
+
+printSquare(6);

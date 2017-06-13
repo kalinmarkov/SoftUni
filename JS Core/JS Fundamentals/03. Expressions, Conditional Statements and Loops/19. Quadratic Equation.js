@@ -1,7 +1,7 @@
 function print(input) {
-    a = Number(input[0]);
-    b = Number(input[1]);
-    c = Number(input[2]);
+    let a = Number(input[0]);
+    let b = Number(input[1]);
+    let c = Number(input[2]);
 
     let d = (b * b) - 4 * a * c;
 

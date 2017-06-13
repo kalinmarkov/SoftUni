@@ -12,3 +12,5 @@ function printLastDay(input) {
 
     console.log(lastDay.getUTCDate());
 }
+
+printLastDay([17, 3, 2002]);

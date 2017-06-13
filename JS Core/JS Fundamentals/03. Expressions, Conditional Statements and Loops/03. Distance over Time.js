@@ -14,4 +14,4 @@ function calculateDistance(arr) {
     console.log(distance);
 }
 
-calculateDistance(5, -5, 40);
+calculateDistance([5, -5, 40]);
