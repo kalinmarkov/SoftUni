@@ -7,3 +7,5 @@ function main(email) {
         console.log("Invalid");
     }
 }
+
+main('invalid@emai1.bg');

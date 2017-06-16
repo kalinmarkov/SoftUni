@@ -1,7 +1,7 @@
 function main(text) {
 
-    let regex=new RegExp(/[\w]+/g);
-    let words=[];
+    let regex = new RegExp(/[\w]+/g);
+    let words = [];
     let match;
     while (match = regex.exec(text)) {
         words.push(match[0]);
@@ -9,3 +9,5 @@ function main(text) {
 
     console.log(words.join('|'));
 }
+
+main('_(Underscores) are also word characters');
