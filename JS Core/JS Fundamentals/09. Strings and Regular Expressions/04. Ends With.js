@@ -7,4 +7,4 @@ function main(text, pattern) {
     }
 }
 
-main('This sentence ends with fun?', 'fun?');
+main('This sentence ends with fun?', 'h fun?');
