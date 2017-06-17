@@ -19,6 +19,8 @@ function main(input) {
 }
 
 main(['Ashton',
+    'Billy',
+    'Braston',
     'Kutcher',
     'Ariel',
     'Lilly',

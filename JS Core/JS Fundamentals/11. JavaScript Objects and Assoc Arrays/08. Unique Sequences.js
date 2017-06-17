@@ -6,7 +6,7 @@ function main(input) {
         seqs.add(arrayToAdd);
     }
     let result = Array.from(seqs)
-        .sort((a,b) =>a.split(', ').length - b.split(', ').length);
+        .sort((a, b) => a.split(', ').length - b.split(', ').length);
 
     result.forEach(arr => console.log(arr));
 }

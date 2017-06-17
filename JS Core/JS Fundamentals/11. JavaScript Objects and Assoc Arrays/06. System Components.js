@@ -2,7 +2,7 @@ function main(input) {
     let systems = new Map();
 
     for (let i = 0; i < input.length; i++) {
-        let systemArgs = input[i].split("|").map(x=>x.trim()).filter(x => x != "");
+        let systemArgs = input[i].split("|").map(x => x.trim()).filter(x => x != "");
         let systemName = systemArgs[0];
         let componentName = systemArgs[1];
         let subcomponentName = systemArgs[2];

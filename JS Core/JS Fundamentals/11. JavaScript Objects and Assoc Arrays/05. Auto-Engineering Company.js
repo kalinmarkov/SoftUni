@@ -11,7 +11,7 @@ function main(input) {
         }
 
         if(!cars.get(carBrand).has(carModel)){
-            cars.get(carBrand).set(carModel,0);
+            cars.get(carBrand).set(carModel, 0);
         }
 
         cars.get(carBrand).set(carModel,cars.get(carBrand).get(carModel) + producedCars);

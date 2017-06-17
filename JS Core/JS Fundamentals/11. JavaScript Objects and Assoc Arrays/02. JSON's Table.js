@@ -5,7 +5,7 @@ function jsonToHtmlTable(inputArr) {
         htmlTable += `\t<tr>\n`;
         htmlTable += `\t\t<td>${htmlEscape(employee["name"])}</td>\n`;
         htmlTable += `\t\t<td>${htmlEscape(employee["position"])}</td>\n`;
-        htmlTable += `\t\t<td>${htmlEscape(employee["salary"]) }</td>\n`;
+        htmlTable += `\t\t<td>${htmlEscape(employee["salary"])}</td>\n`;
         htmlTable += `\t<tr>\n`;
     }
     htmlTable += `</table>`;
@@ -14,7 +14,7 @@ function jsonToHtmlTable(inputArr) {
     function htmlEscape(text) {
         text = new String(text);
         let map = {'"': '&quot;', '&': '&amp;', "'": '&#39;', '<': '&lt;','>': '&gt;'};
-        return text.replace(/[\"&'<>]/g,ch => map[ch]);
+        return text.replace(/[\"&'<>]/g, ch => map[ch]);
     }
 }
 
