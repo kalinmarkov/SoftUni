@@ -3,7 +3,7 @@ function main(inputArr) {
     let map=new Map();
 
     for (let i = 0; i < inputArr.length; i++) {
-        let saleArgs = inputArr[i].split(/\s*->\s*/g).filter(x=>x!="");
+        let saleArgs = inputArr[i].split(/\s*->\s*/g).filter(x => x != "");
         let townName = saleArgs[0];
         let product = saleArgs[1];
         let sale = saleArgs[2].split(/\s*:\s*/g).map(Number);
